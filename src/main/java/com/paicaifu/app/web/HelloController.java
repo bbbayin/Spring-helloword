@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by bayin on 2017/2/17.
  */
 @RestController
-public class HelloContoller {
+public class HelloController {
     @RequestMapping("/hello")
     public String index() {
         return "Hello World";
