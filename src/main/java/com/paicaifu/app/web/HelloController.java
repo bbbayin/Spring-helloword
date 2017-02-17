@@ -3,6 +3,9 @@ package com.paicaifu.app.web;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.text.DecimalFormat;
 
 /**
  * Created by bayin on 2017/2/17.
@@ -27,5 +30,23 @@ public class HelloController {
         result = Math.sqrt(temp);
 
         return String.valueOf(result);
+    }
+
+    @RequestMapping("/cheng")
+    public String cheng(@RequestParam("a") String a, @RequestParam("b") String b) {
+        double a1, b1;
+        DecimalFormat df = new DecimalFormat("######0.0000");
+        try {
+            a1 = Double.parseDouble(a);
+            b1 = Double.parseDouble(b);
+        } catch (Exception e) {
+            return "参数传递错误";
+        }
+        double c = a1 * b1;
+        return String.valueOf(df.format(c));
+    }
+    @RequestMapping("/")
+    public String calculatorPage(){
+        return "index";
     }
 }
