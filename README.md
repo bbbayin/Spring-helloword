@@ -1,19 +1,20 @@
 # Spring-helloword
-Spring学习之旅dayone-HelloWord
+Spring学习之旅dayone-HelloWord     
 
 ##day one
---
+---------------------
 
 * @Controller @RestController之区别：@RestController用来返回json字符串数据，@Controller用来指向一个web页面
 * @RequestMapping 指定、设置路径映射地址
-* @ResponseBody
+* @ResponseBody       
 
 
 ##day two
---
+---------------------
 
-####增加swagger2文档管理
-###step1  
+**增加swagger2文档管理**        
+
+### step1  
    在pom.xml中添加依赖
 >   		<dependency>
 >   			<groupId>io.springfox</groupId>
@@ -25,26 +26,27 @@ Spring学习之旅dayone-HelloWord
 >   			<artifactId>springfox-swagger-ui</artifactId>
 >   			<version>2.2.2</version>
 >   		</dependency>
-
+        
+        
 ### step2
 
-   在Application同级包创建类`Swagger2.class`
+   在Application同级包创建类`Swagger2.class`             
    
 ### step3
    
    在Controller的方法中添加注释，例如：
    >@ApiOperation(value="获取用户列表", notes="")
-   ><br>@RequestMapping(value={""}, method=RequestMethod.GET)
+   ><br>@RequestMapping(value={""}, method=RequestMethod.GET)              
    
 ### step4
-   运行项目，访问http://localhost:8080/swagger-ui.html
+   运行项目，访问http://localhost:8080/swagger-ui.html                   
    
    
 ## day three
 
-### 连接JDBC数据库
+### 连接JDBC数据库            
 
-### step1 **添加依赖**
+### step1 **添加依赖**            
 
 
 ```
@@ -59,7 +61,7 @@ Spring学习之旅dayone-HelloWord
         </dependency>
 ```
 
-**添加jdbc配置文件**
+**添加jdbc配置文件**            
 
 ```
 spring.datasource.url=jdbc:mysql://localhost:3306/test //test是数据库名称
