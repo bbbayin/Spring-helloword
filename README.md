@@ -1,7 +1,7 @@
 # Spring-helloword
 Spring学习之旅dayone-HelloWord     
 
-##day one
+## day one
 ---------------------
 
 * @Controller @RestController之区别：@RestController用来返回json字符串数据，@Controller用来指向一个web页面
@@ -9,24 +9,25 @@ Spring学习之旅dayone-HelloWord
 * @ResponseBody       
 
 
-##day two
+## day two
 ---------------------
 
 **增加swagger2文档管理**        
 
 ### step1  
    在pom.xml中添加依赖
->   		<dependency>
->   			<groupId>io.springfox</groupId>
->   			<artifactId>springfox-swagger2</artifactId>
->   			<version>2.2.2</version>
->   		</dependency>
->   		<dependency>
->   			<groupId>io.springfox</groupId>
->   			<artifactId>springfox-swagger-ui</artifactId>
->   			<version>2.2.2</version>
->   		</dependency>
-        
+   ```
+   		<dependency>
+   			<groupId>io.springfox</groupId>
+   			<artifactId>springfox-swagger2</artifactId>
+   			<version>2.2.2</version>
+   		</dependency>
+   		<dependency>
+   			<groupId>io.springfox</groupId>
+   			<artifactId>springfox-swagger-ui</artifactId>
+   			<version>2.2.2</version>
+   		</dependency>
+   ```     
         
 ### step2
 
@@ -43,6 +44,7 @@ Spring学习之旅dayone-HelloWord
    
    
 ## day three
+---------------------
 
 ### 连接JDBC数据库            
 
