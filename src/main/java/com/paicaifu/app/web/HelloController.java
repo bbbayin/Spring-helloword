@@ -1,5 +1,6 @@
 package com.paicaifu.app.web;
 
+import com.paicaifu.app.web.exception.JsonResultException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,16 +38,16 @@ public class HelloController {
     }
 
     @RequestMapping("/cheng")
-    public String cheng(@RequestParam("a") String a, @RequestParam("b") String b) {
+    public String cheng(@RequestParam("a") String a, @RequestParam("b") String b) throws JsonResultException {
         double a1, b1;
-        DecimalFormat df = new DecimalFormat("######0.0000");
-        try {
-            a1 = Double.parseDouble(a);
-            b1 = Double.parseDouble(b);
-        } catch (Exception e) {
-            return "参数传递错误";
-        }
+        a1 = Double.parseDouble(a);
+        b1 = Double.parseDouble(b);
         double c = a1 * b1;
-        return String.valueOf(df.format(c));
+        return String.valueOf(c);
+    }
+
+    @RequestMapping("/json")
+    public void jsonExcTest() throws JsonResultException{
+        throw new JsonResultException("发生错误");
     }
 }
