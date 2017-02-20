@@ -8,7 +8,7 @@ Spring学习之旅dayone-HelloWord
 ####day two
 
  ##### 增加swagger2文档管理
-   ##### step1  
+ ### step1  
    在pom.xml中添加依赖
 >   		<dependency>
 >   			<groupId>io.springfox</groupId>
@@ -21,16 +21,16 @@ Spring学习之旅dayone-HelloWord
 >   			<version>2.2.2</version>
 >   		</dependency>
 
-   ##### step2
+ ### step2
 
    在Application同级包创建类`Swagger2.class`
    
-   ##### step3
+ ### step3
    
    在Controller的方法中添加注释，例如：
    >@ApiOperation(value="获取用户列表", notes="")
    ><br>@RequestMapping(value={""}, method=RequestMethod.GET)
    
-   ##### step4
+ ### step4
    运行项目，访问http://localhost:8080/swagger-ui.html
 
