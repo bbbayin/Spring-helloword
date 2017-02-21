@@ -1,13 +1,32 @@
 package com.paicaifu.app.domain;
 
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * Created by Administrator on 2017/2/18.
  */
+@Entity
 public class User {
+    @Id
+    @GeneratedValue
     private long id;
+
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private String age;
+
+    public User() {
+    }
+
+    public User(String name, String age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public long getId() {
         return id;

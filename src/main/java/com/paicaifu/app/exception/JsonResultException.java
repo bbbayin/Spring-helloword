@@ -1,4 +1,4 @@
-package com.paicaifu.app.web.exception;
+package com.paicaifu.app.exception;
 
 /**
  * Created by bayin on 2017/2/20.

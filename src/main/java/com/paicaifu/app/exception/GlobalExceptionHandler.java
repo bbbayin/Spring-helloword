@@ -1,4 +1,4 @@
-package com.paicaifu.app.web.exception;
+package com.paicaifu.app.exception;
 
 import com.paicaifu.app.domain.ErrorInfo;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
