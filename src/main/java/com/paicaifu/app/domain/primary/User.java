@@ -1,4 +1,4 @@
-package com.paicaifu.app.domain;
+package com.paicaifu.app.domain.primary;
 
 
 import javax.persistence.Column;

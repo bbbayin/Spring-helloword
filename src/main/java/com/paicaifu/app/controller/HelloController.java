@@ -1,4 +1,4 @@
-package com.paicaifu.app.web;
+package com.paicaifu.app.controller;
 
 import com.paicaifu.app.exception.JsonResultException;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,4 @@
-package com.paicaifu.app.domain;
+package com.paicaifu.app.domain.primary;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

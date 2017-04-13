@@ -1,10 +1,9 @@
-package com.paicaifu.app.web;
+package com.paicaifu.app.controller;
 
 import com.paicaifu.app.domain.ResultBean;
-import com.paicaifu.app.domain.User;
-import com.paicaifu.app.domain.UserRepository;
+import com.paicaifu.app.domain.primary.User;
+import com.paicaifu.app.domain.primary.UserRepository;
 import com.paicaifu.app.service.UserService;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -43,8 +42,8 @@ public class UserController {
 
     @ApiOperation(value = "查询用户数量", notes = "")
     @RequestMapping(value = "/usercount", method = RequestMethod.GET)
-    public ResultBean<Map<String, Integer>> getUserCount() {
-        ResultBean<Map<String, Integer>> resultBean = new ResultBean<>();
+    public ResultBean<String, Integer> getUserCount() {
+        ResultBean<String, Integer> resultBean = new ResultBean<>();
         resultBean.setCode("0000");
         resultBean.setMsg("查询成功");
         HashMap<String, Integer> map = new HashMap<>();
@@ -55,9 +54,9 @@ public class UserController {
 
     @ApiOperation(value = "获取所有user信息")
     @RequestMapping(value = "/userlist", method = RequestMethod.GET)
-    public ResultBean<Map<String, List<User>>> getAllUserList() throws Exception {
+    public ResultBean<String, List<User>> getAllUserList() throws Exception {
         List<User> allUserList = userImpl.getAllUserList();
-        ResultBean<Map<String, List<User>>> resultBean = new ResultBean<>();
+        ResultBean<String, List<User>> resultBean = new ResultBean<>();
         resultBean.setMsg("查询成功");
         resultBean.setCode("0000");
         HashMap<String, List<User>> map = new HashMap<>();
@@ -68,8 +67,8 @@ public class UserController {
 
     @ApiOperation(value = "通过name查询user信息")
     @RequestMapping(value = "/userinfo", method = RequestMethod.GET)
-    public ResultBean<Map<String, User>> getUserByName(@RequestParam(value = "name") String name) throws Exception {
-        ResultBean<Map<String, User>> bean = new ResultBean<>();
+    public ResultBean<String, User> getUserByName(@RequestParam(value = "name") String name) throws Exception {
+        ResultBean<String, User> bean = new ResultBean<>();
         User user = userImpl.queryUserByName(name);
         HashMap<String, User> map = new HashMap<>();
         if (user != null)
@@ -90,8 +89,8 @@ public class UserController {
 
     @ApiOperation(value = "根据name查找user-jpa")
     @RequestMapping(value = "/finduser",method = RequestMethod.GET)
-    public ResultBean<Map<String,User>> findUserByName(@RequestParam(value = "name") String name)throws Exception{
-        ResultBean<Map<String, User>> bean = new ResultBean<>();
+    public ResultBean<String,User> findUserByName(@RequestParam(value = "name") String name)throws Exception{
+        ResultBean<String, User> bean = new ResultBean<>();
         User user = userRepository.findByName(name);
         HashMap<String, User> map = new HashMap<>();
         if (user != null)

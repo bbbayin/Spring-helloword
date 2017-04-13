@@ -1,10 +1,11 @@
 package com.paicaifu.app.impl;
 
-import com.paicaifu.app.domain.User;
+import com.paicaifu.app.domain.primary.User;
 import com.paicaifu.app.service.UserService;
 
 import com.paicaifu.app.utils.TextUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
@@ -13,10 +14,7 @@ import org.springframework.stereotype.Service;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by bayin on 2017/2/20.

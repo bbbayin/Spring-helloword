@@ -1,6 +1,6 @@
 package com.paicaifu.app.service;
 
-import com.paicaifu.app.domain.User;
+import com.paicaifu.app.domain.primary.User;
 
 import java.util.List;
 

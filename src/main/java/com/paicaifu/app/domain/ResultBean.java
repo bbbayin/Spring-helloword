@@ -1,12 +1,14 @@
 package com.paicaifu.app.domain;
 
+import java.util.Map;
+
 /**
  * Created by bayin on 2017/2/21.
  */
-public class ResultBean<T> {
+public class ResultBean<K, V> {
     private String code;
     private String msg;
-    private  T result;
+    private Map<K, V> result;
 
     public String getCode() {
         return code;
@@ -24,11 +26,11 @@ public class ResultBean<T> {
         this.msg = msg;
     }
 
-    public T getResult() {
+    public Map<K, V> getResult() {
         return result;
     }
 
-    public void setResult(T result) {
+    public void setResult(Map<K, V> result) {
         this.result = result;
     }
 }
